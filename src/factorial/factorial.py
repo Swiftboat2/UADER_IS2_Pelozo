@@ -5,7 +5,6 @@
 #* Dr.P.E.Colla (c) 2022                                                   *
 #* Creative commons                                                        *
 #*-------------------------------------------------------------------------*
-import sys
 
 def factorial(num): 
     if num < 0: 
@@ -22,23 +21,14 @@ def factorial(num):
             num -= 1
         return fact 
 
-if len(sys.argv) == 1:
-   desde = int(input("Ingrese el número inicial del rango: "))
-   hasta = int(input("Ingrese el número final del rango: "))
-elif len(sys.argv) == 3:
-    desde = int(sys.argv[1])
-    hasta = int(sys.argv[2])
-else:
-    print("Uso: python factorial.py [desde] [hasta]")
-    sys.exit(1)
+print("Este programa calculará los factoriales en un rango especificado.")
 
-if desde < 0 or hasta < 0:
-    print("Los números del rango deben ser mayores o iguales a cero")
-    sys.exit(1)
+desde = int(input("Introduce el número inicial del rango: "))
+hasta = int(input("Introduce el número final del rango: "))
 
 if desde > hasta:
     print("El número inicial del rango debe ser menor o igual al número final")
-    sys.exit(1)
+    exit(1)
 
 print("Factoriales en el rango desde", desde, "hasta", hasta, ":")
 
