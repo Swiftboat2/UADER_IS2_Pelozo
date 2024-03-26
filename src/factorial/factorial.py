@@ -23,11 +23,24 @@ def factorial(num):
         return fact 
 
 if len(sys.argv) == 1:
-   num = int(input("Ingrese un número para calcular su factorial: "))
-elif len(sys.argv) == 2:
-    num = int(sys.argv[1])
+   desde = int(input("Ingrese el número inicial del rango: "))
+   hasta = int(input("Ingrese el número final del rango: "))
+elif len(sys.argv) == 3:
+    desde = int(sys.argv[1])
+    hasta = int(sys.argv[2])
 else:
-    print("Uso: python factorial.py [number]")
+    print("Uso: python factorial.py [desde] [hasta]")
     sys.exit(1)
 
-print("Factorial", num, "! es", factorial(num))
+if desde < 0 or hasta < 0:
+    print("Los números del rango deben ser mayores o iguales a cero")
+    sys.exit(1)
+
+if desde > hasta:
+    print("El número inicial del rango debe ser menor o igual al número final")
+    sys.exit(1)
+
+print("Factoriales en el rango desde", desde, "hasta", hasta, ":")
+
+for num in range(desde, hasta+1):
+    print("Factorial", num, "! es", factorial(num))
