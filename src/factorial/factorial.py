@@ -5,7 +5,6 @@
 #* Dr.P.E.Colla (c) 2022                                                   *
 #* Creative commons                                                        *
 #*-------------------------------------------------------------------------*
-
 def factorial(num): 
     if num < 0: 
         print("Factorial de un número negativo no existe")
@@ -35,4 +34,4 @@ print("Factoriales en el rango desde", desde, "hasta", hasta, ":")
 for num in range(desde, hasta+1):
     print("Factorial", num, "! es", factorial(num))
 
-#prueba de comentarios 
+#prueba de comentarios
