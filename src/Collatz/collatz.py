@@ -20,7 +20,7 @@ def plot_collatz_iterations():
         y_values.append(n)
 
     plt.figure(figsize=(10, 6))
-    plt.scatter(x_values, y_values, marker='o', color='blue', s=5)
+    plt.scatter(x_values, y_values, marker='o', color='red', s=5)
     plt.title('Número de Collatz: Número de iteraciones vs Número de inicio')
     plt.xlabel('Número de iteraciones')
     plt.ylabel('Número de inicio')
